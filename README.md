@@ -6,7 +6,6 @@ Welcome to my Neovim configuration. This is my current setup and the plugins I u
 ![first](first.png)
 ![second](second.png)
 ![third](third.png)
-![fourth](fourth.png)
 
 ## Plugins
 1. [Lazy](https://github.com/folke/lazy.nvim)
