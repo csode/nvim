@@ -14,7 +14,7 @@ Welcome to my Neovim configuration. This is my current setup and the plugins I u
 5. [Oil](https://github.com/stevearc/oil.nvim)
 
 ## Theme
-- [Vague](https://github.com/stevearc/vague.nvim)
+- [Vague](https://github.com/vague2k/vague.nvim)
 
 ## Features
 - Auto completion
