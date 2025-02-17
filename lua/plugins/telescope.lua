@@ -10,7 +10,7 @@ return {
         require("telescope").setup({
             defaults = {
                 prompt_position = "bottom",
-                winblend = 10,
+                winblend = 0,
                 winhighlight = "Normal:Normal,FloatBorder:Normal,Search:Search",
                 file_ignore_patterns = {
                     "vendor",
