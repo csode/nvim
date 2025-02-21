@@ -104,3 +104,15 @@ vim.keymap.set(
     ':lua local lang = vim.fn.input("Enter language for cheatsheet: ") lang = lang ~= "" and lang or "python" vim.cmd("silent !tmux new-window -n \'cheatsheet\' \'curl cheat.sh/" .. lang .. " && zsh\'")<CR>',
     { noremap = true, silent = true }
 ) 
+-- Random theme switcher
+vim.keymap.set("n", "<leader>tr", function()
+    _G.random_theme()
+end, { desc = "Random theme" })
+
+-- Keybind to show all custom keymaps
+vim.keymap.set("n", "<leader>?", function()
+    require("telescope.builtin").keymaps({
+        modes = { "n", "i", "v", "x", "s", "o", "t", "c" },
+        show_plug = false,
+    })
+end, { desc = "Show all keybindings" }) 
