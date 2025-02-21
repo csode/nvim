@@ -2,6 +2,8 @@
 
 Welcome to my Neovim configuration. This is my personal setup optimized for development with comprehensive LSP support.
 
+[📚 View Neovim Cheatsheet](./CHEATSHEET.md)
+
 ## Preview
 ![first](first.png)
 ![second](second.png)

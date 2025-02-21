@@ -14,3 +14,5 @@ vim.opt.rtp:prepend(lazypath)
 require('keymap')
 require('set')
 require("lazy").setup("plugins")
+
+math.randomseed(os.time())
