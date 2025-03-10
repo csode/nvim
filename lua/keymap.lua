@@ -38,15 +38,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "|", "<cmd>Speedtyper<CR>")
 vim.keymap.set("n", "<leader>zig", "<cmd>LspRestart<cr>")
 vim.keymap.set("n", "Ff", vim.lsp.buf.format)
-
--- Vim-with-me integration
-vim.keymap.set("n", "<leader>vwm", function()
-    require("vim-with-me").StartVimWithMe()
-end)
-vim.keymap.set("n", "<leader>svwm", function()
-    require("vim-with-me").StopVimWithMe()
-end)
-
+--
 -- Register operations
 vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
@@ -103,7 +95,7 @@ vim.keymap.set(
     "<leader>c",
     ':lua local lang = vim.fn.input("Enter language for cheatsheet: ") lang = lang ~= "" and lang or "python" vim.cmd("silent !tmux new-window -n \'cheatsheet\' \'curl cheat.sh/" .. lang .. " && zsh\'")<CR>',
     { noremap = true, silent = true }
-) 
+)
 -- Random theme switcher
 vim.keymap.set("n", "<leader>tr", function()
     _G.random_theme()
@@ -115,4 +107,11 @@ vim.keymap.set("n", "<leader>?", function()
         modes = { "n", "i", "v", "x", "s", "o", "t", "c" },
         show_plug = false,
     })
-end, { desc = "Show all keybindings" }) 
+end, { desc = "Show all keybindings" })
+vim.api.nvim_set_keymap("n", "<leader>s*", "ysiw*", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", '<leader>s"', 'ysiw"', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>ss", ":vsplit<CR>", { noremap = true, silent = true })
+--
+-- Go to definition
+vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "gb", "<C-o>", { noremap = true, silent = true })

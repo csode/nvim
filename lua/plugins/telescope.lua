@@ -18,6 +18,8 @@ return {
                     "/venv",
                     "node_modules/",
                     "/target",
+                    "/assets",
+                    "/asset",
                     "/build",
                     "/.git",
                     "*.lock",
